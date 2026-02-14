@@ -107,6 +107,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.7.3"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      sha256: "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.6.0"
   http_parser:
     dependency: transitive
     description:
@@ -187,6 +195,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  rfw:
+    dependency: "direct main"
+    description:
+      name: rfw
+      sha256: "5e88e5b96415259b9234497e491bf6bf1f827b60be912218144e1311d69015b7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -274,4 +290,4 @@ packages:
     version: "1.1.1"
 sdks:
   dart: ">=3.10.3 <4.0.0"
-  flutter: ">=3.18.0-18.0.pre.54"
+  flutter: ">=3.35.0"

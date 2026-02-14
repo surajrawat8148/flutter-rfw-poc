@@ -1,22 +1,24 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:flutter_rfw_poc/main.dart';
+import 'package:flutter_rfw_poc/app.dart';
+import 'package:get/get.dart';
 
 void main() {
-  testWidgets('Flutter Logo smoke test', (WidgetTester tester) async {
+  testWidgets('Auth page smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const App());
 
-    // Verify that our app displays 'Welcome to Flutter'.
-    expect(find.text('Welcome to Flutter'), findsOneWidget);
-    expect(find.byType(FlutterLogo), findsOneWidget);
+    // Initially, it shows a loading indicator.
+    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+
+    // Wait for the async operation to complete (or fail).
+    // In a test environment without mocking, the http call will likely fail or timeout.
+    // However, we just want to ensure the app starts up without crashing.
+
+    // We can't easily wait for the http call to finish here without mocking.
+    // So we just verify the initial loading state.
+
+    // Clean up GetX state
+    Get.reset();
   });
 }
