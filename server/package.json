@@ -1,0 +1,13 @@
+{
+  "name": "rfw-server",
+  "version": "1.0.0",
+  "description": "Simple Node.js server for serving RFW widgets",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
